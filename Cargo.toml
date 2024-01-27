@@ -10,6 +10,7 @@ askama = { version = "0.12.1", features = ["with-axum", "mime", "markdown"] }
 axum = { version = "0.7.4", features = ["ws", "http2", "macros"] }
 protobuf = { version = "3.3.0", features = ["bytes", "with-bytes"] }
 protobuf-codegen = "3.3.0"
+tokio = { version = "1.35.1", features = ["full"] }
 tracing = "0.1.40"
 
 [profile.dev.package."*"]
