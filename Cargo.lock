@@ -1092,6 +1092,7 @@ dependencies = [
 name = "server-me-daddy"
 version = "0.1.0"
 dependencies = [
+ "api",
  "askama",
  "axum",
  "tokio",
