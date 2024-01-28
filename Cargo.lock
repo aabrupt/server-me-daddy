@@ -56,6 +56,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "askama_axum"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a41603f7cdbf5ac4af60760f17253eb6adf6ec5b6f14a7ed830cf687d375f163"
+dependencies = [
+ "askama",
+ "axum-core",
+ "http",
+]
+
+[[package]]
 name = "askama_derive"
 version = "0.12.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -361,6 +372,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e13624c2627564efccf4934284bdd98cbaa14e79b0b5a141218e507b3a823456"
 dependencies = [
  "percent-encoding",
+]
+
+[[package]]
+name = "functions"
+version = "0.1.0"
+dependencies = [
+ "parking_lot",
 ]
 
 [[package]]
@@ -1093,6 +1111,7 @@ name = "server-me-daddy"
 version = "0.1.0"
 dependencies = [
  "askama",
+ "askama_axum",
  "axum",
  "tokio",
  "tracing",
