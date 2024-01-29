@@ -1,0 +1,9 @@
+export PATH="/run/user/1000/fnm_multishells/216_1706564937015/bin":$PATH
+export FNM_LOGLEVEL="info"
+export FNM_DIR="/home/cindy/.local/share/fnm"
+export FNM_COREPACK_ENABLED="false"
+export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
+export FNM_MULTISHELL_PATH="/run/user/1000/fnm_multishells/216_1706564937015"
+export FNM_VERSION_FILE_STRATEGY="local"
+export FNM_ARCH="x64"
+export FNM_RESOLVE_ENGINES="false"

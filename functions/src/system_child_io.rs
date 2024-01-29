@@ -1,5 +1,14 @@
-pub(crate) struct ReadSystemChildIO<'a> {
-    outer_lock: RwLockReadGuard<'a, RawRwLock, HashMap<SystemCommand, RwLock<SystemChildIO>>>,
-    read: RwLockReadGuard<'a, RawRwLock, SystemChildIO>,
+use std::{rc::Rc, sync::RwLockReadGuard};
+
+use parking_lot::RwLock;
+
+use crate::SystemChild;
+
+pub struct SystemChildIO {
+    inner: Rc<RwLock<SystemChild>>,
 }
-impl ReadSystemChildIO<'a>
+impl SystemChildIO {
+    pub(crate) fn new(rc: &Rc<RwLock<SystemChild>>) -> SystemChildIO {
+        SystemChildIO { inner: rc.clone() }
+    }
+}
