@@ -8,8 +8,10 @@ edition = "2021"
 
 [dependencies]
 askama = { version = "0.12.1", features = ["with-axum", "mime", "markdown"] }
+askama_axum = "0.4.0"
 axum = { version = "0.7.4", features = ["ws", "http2", "macros"] }
 tokio = { version = "1.35.1", features = ["full"] }
+tower-http = { version = "0.5.1", features = ["fs"] }
 tracing = "0.1.40"
 
 [profile.dev.package."*"]
